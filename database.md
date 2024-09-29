@@ -67,6 +67,14 @@ Exercises 6: Aggregate Queries
 8.<img width="1440" alt="Screenshot 2024-09-29 at 22 39 54" src="https://github.com/user-attachments/assets/e28ab406-1419-4d78-9dd2-0c35db33811c">
 9.<img width="1440" alt="Screenshot 2024-09-29 at 22 40 17" src="https://github.com/user-attachments/assets/b57af1fe-f885-40df-b4de-c4f021517dd5">
 10.<img width="1440" alt="Screenshot 2024-09-29 at 22 40 48" src="https://github.com/user-attachments/assets/52bea3b7-802e-488c-a357-5468b8cfd3fd">
+Exercises 7: Update Queries
+1.update game set  location = (select ident from airport where name = "Nottingham Airport"), co2_consumed = co2_consumed+500 where screen_name = "Vesa";
+2.goal_reached
+3.delete from goal_reached; select * from goal_reached;
+4.delete from game; select * from game;
+1.<img width="1440" alt="Screenshot 2024-09-29 at 23 02 12" src="https://github.com/user-attachments/assets/a5ff5ecd-64e8-41c9-bb17-543fcaecbc16">
+2.<img width="1440" alt="Screenshot 2024-09-29 at 23 01 41" src="https://github.com/user-attachments/assets/db472be2-cf9a-43a8-9eef-3bd287057c6a">
+
 
 
 
