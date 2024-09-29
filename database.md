@@ -44,4 +44,29 @@ excercises 5:Subqueries
 3.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 16" src="https://github.com/user-attachments/assets/97b14801-281e-4577-97fc-518d2a29a85c">
 4.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 36" src="https://github.com/user-attachments/assets/4d98114d-1461-4da0-9bb9-a4ebb3102044">
 5.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 58" src="https://github.com/user-attachments/assets/2bd54afd-eb54-4de6-acfc-bdc019f48feb">
+Exercises 6: Aggregate Queries
+1. select max(elevation_ft) from airport;
+2. select continent,count(*) from country group by continent;
+3. select game.screen_name,count(*) from goal_reached,game where goal_reached.game_id
+=game.id group by game_id;
+4.select screen_name from game where co2_consumed in(select min(co2_consumed) from game);
+5.select country.name, count(*) from airport, country where airport.iso_country = country.iso_country group by country.iso_country order by count(*) desc limit 50;
+6.select country.name,count(*) from country,airport where country.iso_country=airport.iso_country group by name having count(*) > 1000;
+7.select name from airport where elevation_ft in(select max(elevation_ft) from airport);
+8.select name from country where iso_country in(select iso_country from airport where elevation_ft in(select max(elevation_ft
+) from airport));
+9.select count(*) from game,goal_reached where game.screen_name="Vesa" and game.id=goal_reached.game_id;
+10.select name from airport where latitude_deg in (select min(latitude_deg) from airport);
+   1.<img width="1440" alt="Screenshot 2024-09-29 at 22 37 22" src="https://github.com/user-attachments/assets/bcdef5ab-2070-41f0-99ee-6d9dfc0781de">
+   2.<img width="1440" alt="Screenshot 2024-09-29 at 22 37 44" src="https://github.com/user-attachments/assets/d876a6cf-c76c-4745-b226-b698012cdd00">
+   3.<img width="1440" alt="Screenshot 2024-09-29 at 22 38 03" src="https://github.com/user-attachments/assets/8b16e4b5-7367-4517-80d9-057baea4f987">
+4.<img width="1440" alt="Screenshot 2024-09-29 at 22 38 22" src="https://github.com/user-attachments/assets/376bdd3d-11b0-4ca4-8466-297a6d828c2c">
+5.<img width="1440" alt="Screenshot 2024-09-29 at 22 38 47" src="https://github.com/user-attachments/assets/b92ff291-9672-4d7c-ab6f-082edb6e1744">
+6.<img width="1440" alt="Screenshot 2024-09-29 at 22 39 11" src="https://github.com/user-attachments/assets/faf4bd53-2c86-499d-a53e-18dc5da800a6">
+7.<img width="1440" alt="Screenshot 2024-09-29 at 22 39 32" src="https://github.com/user-attachments/assets/9a40f8c7-b431-4c8b-8133-1855d6be0fdc">
+8.<img width="1440" alt="Screenshot 2024-09-29 at 22 39 54" src="https://github.com/user-attachments/assets/e28ab406-1419-4d78-9dd2-0c35db33811c">
+9.<img width="1440" alt="Screenshot 2024-09-29 at 22 40 17" src="https://github.com/user-attachments/assets/b57af1fe-f885-40df-b4de-c4f021517dd5">
+10.<img width="1440" alt="Screenshot 2024-09-29 at 22 40 48" src="https://github.com/user-attachments/assets/52bea3b7-802e-488c-a357-5468b8cfd3fd">
+
+
 
