@@ -20,3 +20,15 @@ tentti excercises 2 (viikko 3):
 8.<img width="1440" alt="database screenshot 8" src="https://github.com/user-attachments/assets/ea616210-f1b0-4b28-b63c-e19921568ae9">
 9.<img width="1440" alt="database screenshot 9" src="https://github.com/user-attachments/assets/26512990-ce93-45d4-8f26-d5c8f7faf690">
 10.<img width="1440" alt="database screenshot 10" src="https://github.com/user-attachments/assets/743b43df-8569-4047-9bf3-71f6dc9cbeec">
+excercises 4:join
+1. select country.name as "country name", airport.name as "airport name" from airport inner join country on country.iso_country=airport.iso_country where airport.iso_country = "FI" and airport.scheduled_service="yes";
+2.select screen_name, name from game inner join airport on airport.ident=game.location;
+3.select game.screen_name,country.name from game inner join airport on airport.ident=game.location inner join country on country.iso_country=airport.iso_country;
+4.select airport.name,game.screen_name from airport left join game on game.location=airport.ident where name like "%hels%";
+5.select goal.name,game.screen_name from goal left join goal_reached on goal_reached.goal_id=goal.id left join game on game.id=goal_reached.game_id;
+1. <img width="1440" alt="Screenshot 2024-09-29 at 16 18 03" src="https://github.com/user-attachments/assets/cb768e36-1d02-4712-9387-5dc666db764a">
+2. <img width="1440" alt="Screenshot 2024-09-29 at 16 18 48" src="https://github.com/user-attachments/assets/bc3a9c1f-00b3-4bfe-9580-bed71f286c6e">
+3. <img width="1440" alt="Screenshot 2024-09-29 at 16 19 14" src="https://github.com/user-attachments/assets/abfcca70-e4ec-4b98-a296-d0ff905adac3">
+4. <img width="1440" alt="Screenshot 2024-09-29 at 16 19 37" src="https://github.com/user-attachments/assets/e25e9090-9c9c-4bf0-a11d-db7c321d24d5">
+5. <img width="1440" alt="Screenshot 2024-09-29 at 16 20 57" src="https://github.com/user-attachments/assets/c73dcc40-543a-4093-81a8-413e42e4f59b">
+
