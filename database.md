@@ -31,4 +31,17 @@ excercises 4:join
 3. <img width="1440" alt="Screenshot 2024-09-29 at 16 19 14" src="https://github.com/user-attachments/assets/abfcca70-e4ec-4b98-a296-d0ff905adac3">
 4. <img width="1440" alt="Screenshot 2024-09-29 at 16 19 37" src="https://github.com/user-attachments/assets/e25e9090-9c9c-4bf0-a11d-db7c321d24d5">
 5. <img width="1440" alt="Screenshot 2024-09-29 at 16 20 57" src="https://github.com/user-attachments/assets/c73dcc40-543a-4093-81a8-413e42e4f59b">
+excercises 5:Subqueries
+1. select name from country where iso_country in (select iso_country from airport where name like
+"%satsuma%");
+2. select name from airport where iso_country in (select iso_country from country where name = "Monaco");
+3. select screen_name from game where id in (select game_id from goal_reached where goal_id in (select id from goal where name="CLOUDS"));
+4. select name from country where iso_country not in (select iso_country from airport);
+5. select name from goal where id not in (select goal_id from goal_reached where game_id in(select
+ id from game where screen_name="Heini"));
+1.<img width="1440" alt="Screenshot 2024-09-29 at 18 16 38" src="https://github.com/user-attachments/assets/49cd24a4-4d7d-4ae3-98d1-af20fd5cb638">
+2.<img width="1440" alt="Screenshot 2024-09-29 at 18 16 58" src="https://github.com/user-attachments/assets/53ff8c67-8d93-4e1e-85a5-8f5d7136f988">
+3.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 16" src="https://github.com/user-attachments/assets/97b14801-281e-4577-97fc-518d2a29a85c">
+4.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 36" src="https://github.com/user-attachments/assets/4d98114d-1461-4da0-9bb9-a4ebb3102044">
+5.<img width="1440" alt="Screenshot 2024-09-29 at 18 17 58" src="https://github.com/user-attachments/assets/2bd54afd-eb54-4de6-acfc-bdc019f48feb">
 
